@@ -23,8 +23,13 @@ output <- function(data) {
 
 <img src="https://i1.wp.com/queensswab.nyc/wp-content/uploads/2022/02/cropped-cropped-QSWAB-Logo-Black-e1644731519716.png?fit=468%2C500&ssl=1" height="200">
 
-This is the Solid Waste Planning Committee's draft categorization of the recommendations from the [State of Waste in Queens](https://queensswab.nyc/state-of-waste-in-queens-report/) report. The purpose of this exercise was to incorporate the report into our work as a way to start organizing a long-term plan. The Committee first read through the recommendations and chose the committee or committees who seemed to be most relevant to each recommendation. Then, we distilled all of the recommendations into four overarching goals and categorized each recommendation based on these goals. For the next step, we would like each committee to review our work and report back whether (1) the recommendations were assigned to the best committees, (2) the overarching goals are an accurate distillation, and (3) the recommendations were assigned to the best goals. Additionally, since the report was created, some of the recommendations have been undertaken or completed and others are no longer as relevant to our work. We would love each committee to also indicate whether these goals are a good fit for what the committee plans to prioritize. 
+This is the Solid Waste Planning Committee's draft categorization of the recommendations from the [State of Waste in Queens](https://queensswab.nyc/state-of-waste-in-queens-report/) report. The purpose of this exercise was to incorporate the report into our work as a way to start organizing a long-term plan. The Committee first read through the recommendations and chose the committee or committees that seemed to be most relevant to each recommendation. Then, we distilled all of the recommendations into four overarching goals and categorized each recommendation based on these goals. For the next step, we would like each committee to review our work and report back whether (1) the recommendations were assigned to the appropriate committees, (2) the overarching goals are an accurate distillation, and (3) the recommendations were assigned to the best goal or goals. Additionally, since the report was created, some of the recommendations have been undertaken or completed and others are no longer as relevant to our work. We would love each committee to also indicate whether these goals are a good fit for what the committee plans to prioritize. 
 
+If it's helpful, here's a figure showing our thinking process: 
+
+![](https://github.com/social-lorax/qswab/blob/main/structure.png?raw=true)
+
+<br>
 
 # Goals 
 
@@ -37,4 +42,15 @@ This is the Solid Waste Planning Committee's draft categorization of the recomme
 
 # Committees 
 
+* [Communication](c1_comm.html)
+* [Compost/Organics](c2_comp.html)
+* [Education/Engagement](c3_educ.html)
+* [Environmental Justice](c4_envi.html)
+* [Legislative/Advocacy](c5_legi.html)
+* [Solid Waste Planning](c6_soli.html)
+
+<br>
+
 # Full Table
+
+* [All Recomendations](all.html)
