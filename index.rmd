@@ -1,0 +1,40 @@
+---
+output: 
+  html_document:
+    highlight: tango
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    number_sections: false
+    df_print: kable
+---
+
+```{r include = FALSE}
+library(kableExtra)
+library(tidyverse)
+
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+
+output <- function(data) {
+  knitr::kable(data) %>% 
+    kable_styling(full_width = F)
+}
+```
+
+<img src="https://i1.wp.com/queensswab.nyc/wp-content/uploads/2022/02/cropped-cropped-QSWAB-Logo-Black-e1644731519716.png?fit=468%2C500&ssl=1" height="200">
+
+This is the Solid Waste Planning Committee's draft categorization of the recommendations from the [State of Waste in Queens](https://queensswab.nyc/state-of-waste-in-queens-report/) report. The purpose of this exercise was to incorporate the report into our work as a way to start organizing a long-term plan. The Committee first read through the recommendations and chose the committee or committees who seemed to be most relevant to each recommendation. Then, we distilled all of the recommendations into four overarching goals and categorized each recommendation based on these goals. For the next step, we would like each committee to review our work and report back whether (1) the recommendations were assigned to the best committees, (2) the overarching goals are an accurate distillation, and (3) the recommendations were assigned to the best goals. Additionally, since the report was created, some of the recommendations have been undertaken or completed and others are no longer as relevant to our work. We would love each committee to also indicate whether these goals are a good fit for what the committee plans to prioritize. 
+
+
+# Goals 
+
+* [Goal 1: Increase Reuse and Recycling](g1.html)
+* [Goal 2: Increase Composting](g2.html)
+* [Goal 3: Support Community-Based Waste Reduction and Environmental Initiatives](g3.html)
+* [Goal 4: Improve Waste Collection](g4.html)
+
+<br> 
+
+# Committees 
+
+# Full Table
