@@ -1,0 +1,59 @@
+---
+output: 
+  html_document:
+    highlight: tango
+    toc: false
+    df_print: kable
+---
+
+```{r include = FALSE}
+library(kableExtra)
+library(tidyverse)
+
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+
+output <- function(data) {
+  knitr::kable(data) %>% 
+    kable_styling(full_width = T)
+}
+```
+
+[Back to Main Page](index.html)
+
+# Goal 2: Increase Composting
+
+```{r echo = FALSE}
+read_csv("C:/Users/brenner/Downloads/qswab_goals.csv", locale=locale(encoding = "windows-1252")) %>% 
+  filter(`Increase Composting`) %>% 
+  mutate(`Increase Reuse and Recycling` = if_else(`Increase Reuse and Recycling`, "G1. Increase Reuse and Recycling", ""),
+         `Increase Composting` = if_else(`Increase Composting`, "G2. Increase Composting", ""),
+         `Support Community-Based Waste Reduction and Environmental Initiatives` = if_else(`Support Community-Based Waste Reduction and Environmental Initiatives`,"G3. Support Community-Based Waste Reduction and Environmental Initiatives", ""),
+         `Improve Waste Collection` = if_else(`Improve Waste Collection`, "G4. Improve Waste Collection", ""),
+         
+         `Goal(s)` = str_c(`Increase Reuse and Recycling`, `Increase Composting`, `Support Community-Based Waste Reduction and Environmental Initiatives`, `Improve Waste Collection`, sep = "; "),
+         `Goal(s)` = str_remove_all(`Goal(s)`, " ;"), 
+         `Goal(s)` = str_remove_all(`Goal(s)`, "^; "),
+         `Goal(s)` = str_remove_all(`Goal(s)`, "; $"),
+         `Goal(s)` = str_replace_all(`Goal(s)`, "; ", "\n\n"),
+         
+        Communication  = if_else(Communication , "Communication", ""),
+        `Compost/Organics`  = if_else(`Compost/Organics` , "Compost/Organics", ""),
+        `Education/Engagement`  = if_else(`Education/Engagement` , "Education/Engagement", ""),
+        `Environmental Justice`  = if_else(`Environmental Justice` , "Environmental Justice", ""),
+        `Legislative/Advocacy`  = if_else(`Legislative/Advocacy` , "Legislative/Advocacy", ""),
+        `Solid Waste Planning`  = if_else(`Solid Waste Planning` , "Solid Waste Planning", ""),
+        
+       `Committee(s)` = str_c(Communication, `Compost/Organics`, `Education/Engagement`, 
+                              `Environmental Justice`, `Legislative/Advocacy`,`Solid Waste Planning`,
+                              sep = "; "), 
+       `Committee(s)` = str_remove_all(`Committee(s)`, " ;"),
+       `Committee(s)` = str_remove_all(`Committee(s)`, "^; "),
+       `Committee(s)` = str_remove_all(`Committee(s)`, "; $"),
+       `Committee(s)` = str_replace_all(`Committee(s)`, "; ", "\n")) %>% 
+
+  transmute(Recommendation = str_c("**", Recommendation, "**", "\n\n", "*Short-Term Step*: ", `Short-Term Step`, "\n\n*Long-Term Step*: ", `Long-Term Step`),
+            `Committee(s)`, `Goal(s)`, `QSWAB Role`) %>%
+  output()
+```
+
+[Back to Main Page](index.html)
